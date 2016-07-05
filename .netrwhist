@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/media/alex/exchange/CMS/Erstikurse'
+let g:netrw_dirhist_2='/media/alex/exchange/CMS'
+let g:netrw_dirhist_3='/media/alex/exchange/CMS/Erstikurse'
+let g:netrw_dirhist_4='/media/alex/exchange/CMS/Erstikurse/languages'
+let g:netrw_dirhist_5='/media/alex/exchange/CMS/Erstikurse'
