@@ -10,7 +10,7 @@ Plugins were installed over pathogen. New plugins should be added as submodules,
 -To install this configuration on another machine, run:
 ```
 cd ~
-git clone http://github.com/username/dotvim.git ~/.vim
+git clone https://github.com/ABob/vim.git   ### or git clone git@github.com:ABob/vim.git
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim
