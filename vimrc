@@ -16,7 +16,9 @@ call pathogen#infect()
 " change leader key to space
 :let mapleader = " "
 
-
+" Set color mode to 256 color support 
+" (needed to display airline colors correctly)
+set t_Co=256
 
 " use 256 colors in gnome terminal
 if $COLORTERM == 'gnome-terminal'
@@ -55,7 +57,7 @@ endif
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-set showcmd		" Show (partial) command in status line.
+"set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
 "set ignorecase		" Do case insensitive matching
 "set smartcase		" Do smart case matching
@@ -91,6 +93,10 @@ endif
 
 " Show line numbers
 set number
+" Show relative numbers 
+" (in combination with :set number, the absolute line
+" number is shown at cursor line)
+set relativenumber
 
 " auto indent
 set autoindent
@@ -138,7 +144,38 @@ inoremap <c-w> <c-g>u<c-w>
 " Options for vim-nerdcommenter plugin
 "
 "Add spaces after comment delimiters by default
-"let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 1
 
 "Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
+
+" Map button to toggle tagbar on/off
+nmap <Leader><F8> : TagbarToggle<CR>
+
+" vim-anzu settings START ------------
+"
+" mapping
+nmap n <Plug>(anzu-n)
+nmap N <Plug>(anzu-N)
+nmap * <Plug>(anzu-star)
+nmap # <Plug>(anzu-sharp)
+
+" clear anzu status
+nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+
+" vim-anzu settings END ------------
+
+" vim-airline settings START -----------
+"
+" Show status bar in unsplitted screen too
+set laststatus=2
+
+" display settings for tabline extension
+let g:airline#extensions#tabline#fnamemod = ':.'
+let g:airline#extensions#tabline#fnamecollapse = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" enable tabline, anzu and tagbar extensions for airline
+let g:airline_extensions = ['tabline', 'anzu', 'tagbar']
+
+" vim-airline settings END -------------
