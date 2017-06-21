@@ -10,3 +10,6 @@
 [submodule "bundle/vim-autotag"]
 	path = bundle/vim-autotag
 	url = git://github.com/craigemery/vim-autotag.git
+[submodule "bundle/vim-tagbar"]
+	path = bundle/vim-tagbar
+	url = https://github.com/majutsushi/tagbar
