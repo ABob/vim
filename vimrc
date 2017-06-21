@@ -64,7 +64,11 @@ set showmatch		" Show matching brackets.
 "set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden             " Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
+"set mouse=a		" Enable mouse usage (all modes)
+
+" Toogle bulk paste mode by using F2 (good for pasting multiple, indented
+" lines)
+set pastetoggle=<F2>
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
@@ -104,8 +108,26 @@ set autoindent
 " highlight search results
 set hlsearch
 
+" show search matches as you type
+set incsearch
+
 " ignore cases by default when searching
 set ignorecase
+" ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smartcase
+
+" number of spaces to use for autoindenting
+set shiftwidth=4
+" use multiple of shiftwidt when indentin with '<' and '>'
+set shiftround
+
+" don't beep
+set visualbell
+" don't beep
+set noerrorbells
+
+" insert tabs on the start of a line according to shiftwidth, not tabstop
+set smarttab
 
 " Show Latex buttons in GVim when opening a tex-file
 filetype plugin on
