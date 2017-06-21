@@ -7,7 +7,7 @@ http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-patho
 
 Plugins were installed over pathogen. New plugins should be added as git submodules, if they are cloned from their git repositories. 
 
--To install this configuration on another machine, run:
+- To install this configuration on another machine, run:
 ```
 cd ~
 git clone https://github.com/ABob/vim.git   ### or git clone git@github.com:ABob/vim.git
@@ -26,13 +26,13 @@ git add .
 git commit -m "Install [PLUGIN-NAME] bundle as a submodule."
 ```
 
--To upgrade a plugin, run:
+- To upgrade a plugin, run:
 ```
 cd ~/.vim/bundle/<plugin>
 git pull origin master
 ```
 
--To upgrade all bundles, run:
+- To upgrade all bundles, run:
 ```
 git submodule foreach git pull origin master
 ```
