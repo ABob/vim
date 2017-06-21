@@ -13,6 +13,11 @@ runtime! debian.vim
 " for running pathogen
 call pathogen#infect()
 
+" change leader key to space
+:let mapleader = " "
+
+
+
 " use 256 colors in gnome terminal
 if $COLORTERM == 'gnome-terminal'
 	  set t_Co=256
@@ -129,3 +134,11 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 " make <c-u> and <c-w> undoable
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
+
+" Options for vim-nerdcommenter plugin
+"
+"Add spaces after comment delimiters by default
+"let g:NERDSpaceDelims = 1
+
+"Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
